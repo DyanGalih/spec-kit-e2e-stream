@@ -5,27 +5,36 @@ This extension is meant to be installed into a Spec Kit project. It can run with
 ## Requirements
 
 - Spec Kit initialized in the target repository
-- `spec-kit-memory-hub` installed if you want durable project memory and feature synthesis
+- `spec-kit-memory-hub` installed if you want durable project memory and feature memory synthesis
 - an E2E runner, preferably Playwright when the project already uses it
 
 ## Steps
 
 1. Open the target Spec Kit project in your editor.
-2. Install the published GitHub release of this extension into that project through the Spec Kit extension mechanism.
+2. Install the published GitHub release of this extension from [DyanGalih/spec-kit-e2e-stream](https://github.com/DyanGalih/spec-kit-e2e-stream) into that project through the Spec Kit extension mechanism.
 3. Make sure the repo is already using Spec Kit conventions such as `spec.md`, `plan.md`, and `tasks.md`.
-4. Optionally install `spec-kit-memory-hub` if you want durable memory and feature synthesis.
+4. Optionally install `spec-kit-memory-hub` if you want durable memory and feature memory synthesis.
 5. Run `/speckit.e2e.bootstrap`.
 6. Review the generated `tests/e2e/` structure and adjust project-specific selectors or runner settings as needed.
 7. If the project already has Playwright, keep using its existing config and test runner style.
 
-## Example install flow
+## GitHub Release Install Flow
 
-If your Spec Kit project supports extension installation from a GitHub release reference, the flow usually looks like this:
+For this repository, install the published release `v0.1.0` from:
+
+- [git@github.com:DyanGalih/spec-kit-e2e-stream.git](git@github.com:DyanGalih/spec-kit-e2e-stream.git)
+- [https://github.com/DyanGalih/spec-kit-e2e-stream.git](https://github.com/DyanGalih/spec-kit-e2e-stream.git)
+
+Then use the Spec Kit extension installer in the target project.
+
+If your Spec Kit project supports installation from a GitHub release reference, the flow usually looks like this:
 
 ```bash
 cd /path/to/your-spec-kit-project
 specify extension add <github-release-reference-for-spec-kit-e2e-stream>
 ```
+
+The release to install is `v0.1.0`.
 
 After installation, run the bootstrap command in the project:
 
@@ -52,13 +61,17 @@ That baseline matches the extension manifest format and the layered spec/plan/ta
 
 `spec-kit-memory-hub` is not required to install or run this extension.
 
-If you install it, the E2E workflow can also read and update durable memory and feature-local synthesis files. If you do not install it, the extension still runs from the current Spec Kit artifacts and implementation surface.
+If you install it, the E2E workflow can also read and update durable memory and feature memory synthesis files. If you do not install it, the extension still runs from the current Spec Kit artifacts and implementation surface.
 
 ## GitHub Release Install Notes
 
 When the repository is published on GitHub, prefer the release artifact over a local development path for real project installs.
 
 This keeps the installation reproducible across teams because everyone installs the same tagged release rather than a mutable working tree.
+
+The current release for this project is `v0.1.1`.
+
+If you only need the source code instead of the packaged extension, use the Git remote URLs above.
 
 ## Notes on portability
 

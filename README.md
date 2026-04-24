@@ -1,6 +1,6 @@
 # Spec Kit E2E Stream
 
-Version: 0.1.0
+Version: 0.1.1
 
 Minimum Spec Kit version: 0.2.0
 
@@ -12,7 +12,7 @@ This extension is designed for browser-based web application E2E work. It is a g
 
 1. Open a Spec Kit project that already has `spec.md`, `plan.md`, and `tasks.md`.
 2. Install this extension into that project.
-3. Optionally install `spec-kit-memory-hub` if you want durable project memory and feature-local synthesis.
+3. Optionally install `spec-kit-memory-hub` if you want durable project memory and feature memory synthesis.
 4. Run `/speckit.e2e.bootstrap` to create the baseline `tests/e2e/` structure.
 5. Run `/speckit.e2e.generate` for the current feature when it is ready for E2E coverage.
 6. Run `node scripts/e2e-menu.mjs --list` or `node scripts/e2e-menu.mjs --all --headed` to discover and execute scenarios locally.
@@ -37,30 +37,34 @@ It is intended to work with Spec Kit projects that already use Spec Driven Devel
 ## Install
 
 1. Go to the target Spec Kit project.
-2. Publish or choose the GitHub release you want to install, then use the Spec Kit extension installer with that release reference in the target project.
+2. Publish or choose the GitHub release from [DyanGalih/spec-kit-e2e-stream](https://github.com/DyanGalih/spec-kit-e2e-stream) you want to install.
 3. Confirm the repo already uses Spec Kit workflow files such as `spec.md`, `plan.md`, and `tasks.md`.
-4. Optionally install `spec-kit-memory-hub` if you want durable project memory and feature-local synthesis.
+4. Optionally install `spec-kit-memory-hub` if you want durable project memory and feature memory synthesis.
 5. Run `/speckit.e2e.bootstrap` to scaffold the E2E baseline.
 6. Open the generated `tests/e2e/` folder and review the helpers, sample flow, and menu script.
 
 ### Install From GitHub Release
 
-When you commit this project to GitHub and publish a release, install the release directly into a Spec Kit project instead of using a local path.
+When you publish this project to GitHub as release `v0.1.0`, install that release directly into a Spec Kit project instead of using a local path.
 
 Use the release artifact or release reference that your Spec Kit installer supports, then run the same bootstrap command in the target project.
 
-Example shape:
+For this repository, use:
 
 ```text
-specify extension add <github-release-reference-for-spec-kit-e2e-stream>
+git@github.com:DyanGalih/spec-kit-e2e-stream.git
+https://github.com/DyanGalih/spec-kit-e2e-stream.git
+v0.1.0
 ```
 
-The exact release reference depends on how you publish the GitHub release, but the workflow stays the same:
+The exact Spec Kit install command can vary by Spec Kit version, but the workflow stays the same:
 
 1. publish the release on GitHub
-2. install the release into the Spec Kit project
+2. install the published `v0.1.0` release into the Spec Kit project
 3. run `/speckit.e2e.bootstrap`
 4. generate or update feature E2E flows
+
+For this repository, the canonical source is [git@github.com:DyanGalih/spec-kit-e2e-stream.git](git@github.com:DyanGalih/spec-kit-e2e-stream.git) and the mirrored HTTPS source is [https://github.com/DyanGalih/spec-kit-e2e-stream.git](https://github.com/DyanGalih/spec-kit-e2e-stream.git).
 
 If the memory hub is installed, the workflow can also read and update:
 

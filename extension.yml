@@ -3,10 +3,10 @@ schema_version: '1.0'
 extension:
   id: e2e-stream
   name: 'Spec Kit E2E Stream'
-  version: '0.1.0'
+  version: '0.1.1'
   description: 'Reusable E2E workflow for generating, running, refreshing, and auditing Spec Kit feature tests with live terminal logging.'
   author: 'GitHub Copilot'
-  repository: https://github.com/DyanGalih/spec-kit-e2e-stream.git
+  repository: https://github.com/DyanGalih/spec-kit-e2e-stream
   license: MIT
 
 requires:
