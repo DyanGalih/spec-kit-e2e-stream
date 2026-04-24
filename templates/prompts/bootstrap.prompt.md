@@ -42,4 +42,4 @@ When you add the sample artifacts, make the flow read like a live terminal story
 
 ## Memory requirement
 
-If the memory hub is unavailable, say so explicitly and ask the user to install `spec-kit-memory-hub` before feature-specific generation.
+If the memory hub is unavailable, say so explicitly and remind the user that this extension still works without it, but memory-aware generation is richer with `spec-kit-memory-hub` installed.

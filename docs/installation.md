@@ -69,7 +69,7 @@ When the repository is published on GitHub, prefer the release artifact over a l
 
 This keeps the installation reproducible across teams because everyone installs the same tagged release rather than a mutable working tree.
 
-The current release for this project is `v0.1.1`.
+The current release for this project is `v0.1.2`.
 
 If you only need the source code instead of the packaged extension, use the Git remote URLs above.
 
