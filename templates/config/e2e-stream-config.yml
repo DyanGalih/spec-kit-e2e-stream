@@ -1,0 +1,19 @@
+project:
+  e2e_root: tests/e2e
+  helpers_root: tests/e2e/helpers
+  menu_script: scripts/e2e-menu.mjs
+
+runner:
+  browser: playwright
+  headless: false
+  headed_default: true
+
+memory:
+  companion_extension: spec-kit-memory-hub
+  durable_memory_root: docs/memory
+  feature_memory_root: specs
+  feature_synthesis_file: memory-synthesis.md
+
+logging:
+  prefix: '[e2e]'
+  show_timestamps: true

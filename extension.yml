@@ -1,0 +1,47 @@
+schema_version: '1.0'
+
+extension:
+  id: e2e-stream
+  name: 'Spec Kit E2E Stream'
+  version: '0.1.0'
+  description: 'Reusable E2E workflow for generating, running, refreshing, and auditing Spec Kit feature tests with live terminal logging.'
+  author: 'GitHub Copilot'
+  repository: https://github.com/DyanGalih/spec-kit-e2e-stream.git
+  license: MIT
+
+requires:
+  speckit_version: '>=0.2.0'
+
+provides:
+  commands:
+    - name: speckit.e2e.bootstrap
+      file: commands/speckit.e2e.bootstrap.md
+      description: 'Scaffold the E2E folder structure, helpers, menu runner, and quickstart.'
+    - name: speckit.e2e.generate
+      file: commands/speckit.e2e.generate.md
+      description: 'Generate E2E tests from Spec Kit artifacts and current implementation behavior.'
+    - name: speckit.e2e.update
+      file: commands/speckit.e2e.update.md
+      description: 'Refresh existing E2E tests when feature specs or implementation details change.'
+    - name: speckit.e2e.audit
+      file: commands/speckit.e2e.audit.md
+      description: 'Audit selector stability, test duplication, coverage gaps, and memory update needs.'
+  config:
+    - name: e2e-stream-config.yml
+      template: templates/config/e2e-stream-config.yml
+      description: 'Optional defaults for the E2E root, menu runner, and memory locations.'
+      required: false
+
+tags:
+  - e2e
+  - testing
+  - playwright
+  - spec-kit
+  - memory
+
+defaults:
+  project:
+    e2e_root: tests/e2e
+    helpers_root: tests/e2e/helpers
+    memory_root: docs/memory
+    feature_memory_root: specs
